@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" class="no-js">
+    <head> 
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="js/loginStuLib.js" defer></script>
+        <link rel="stylesheet" href="css/logStuLib.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    </head>
+    <body>
+        <h2>Student log-in and update</h2> 
+       
+
+        <div class="row">
+            <div class="column column1Width" id="choices" style="background-color:#ADD8E6;">           
+            <form id="loginForm" name="loginForm" onsubmit='getUser();return false;'>
+                    <label for="username">username:</label><br>
+                    <input type="text"  id="username" name="username" required><br>
+                    <label for="password">password:</label><br>
+                    <input type="password"  name="password" id="password" required><br>
+                    <input type="submit" class="button" value="Login">
+                    <input type="button" class="button" value="Logout" onclick="Logout()" style="background-color: red;">
+                    <br>
+
+                    <label for="student_id">Change Academic ID:</label><br>
+                    <input type="text"  id="student_id" name="student_id" required><br>
+
+                    <label for="university">Change University:</label><br>
+                    <select name="university" id="university" >
+                        <option value="UOC">University of Crete (UoC)</option>
+                        <option value="HELMEPA">Hellenic Mediterenian University (HELMEPA)</option>
+                        <option value="TUC">Technical University Crete (TUC)</option>
+                    </select>
+                    <br>
+                
+                    <label for="university">Change Email:</label><br>
+                    <input type="text"  id="email" name="email" required><br>
+                    
+                    <input type="button" class="updateStudent" onclick="UpdateStudent();return false;"  value="Update Book">                
+            
+            
+            
+                </form>
+            </div>
+            <div class="column column2Width" id="output" style="background-color:#fffff0;">
+                <h2>Output</h2>
+                <div id="ajaxContent"></div>
+                
+            </div>
+
+            <div class="column column3Width" id="output" style="background-color:#fffff0;">
+                <h2>Available Books</h2>
+                <div id="ajaxContent2"></div>
+                
+            </div>
+			
+        </div>
+    </body>
+
+</html>
+

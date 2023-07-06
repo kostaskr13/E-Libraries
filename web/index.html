@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" class="no-js">
+    <head> 
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <link rel="stylesheet" href="css/welcomeStyle.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="js/loginStuLib.js"></script>
+    </head>
+
+
+            
+    <body style="background-color: rgb(240, 240, 240)"> 
+        <div class="login-container">
+          <div class="login-image">
+            <img src="img/library.jpg" width="100%"height="200%">
+          </div>
+          <form class="loginForm" id="loginForm" name="loginForm" onsubmit='getUser();return false;'>
+            <h1>Login</h1>
+            <div class="form-group" >
+              <label for="username">Username</label>
+              <label for="error"id="error" style="color: red; ">Username or Password Incorrect</label><br>
+              <input type="text" class="form-control" id="username" name="username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary" value="Login" id="login" onclick="goForward()">Log-In</button>
+            <button type="submit" class="btn btn-primary" onclick="Register()">Register</button><br><br>
+            <button type="submit" class="btn btn-primary"style="background-color: red;">Logout</button><br><br>
+            <a href="viewBooks.html">Do not Login(Simple user)</a><br>
+            <div id="ajaxContent"></div>
+
+          </form>
+        </div>
+      </body>
+</html>
+

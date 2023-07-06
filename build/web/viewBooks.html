@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" class="no-js">
+    <head> 
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="js/updateBook.js" defer></script>
+        <link rel="stylesheet" href="css/updateBook.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/welcomeStyle.css">
+        
+
+    </head>
+        <body style="background-color: rgb(240, 240, 240)"> 
+            <div class="login-container">
+              
+              <form class="loginForm" id="loginForm" name="loginForm" onsubmit='getUser();return false;'>
+                <h1>View Books</h1>
+                
+                <form id="loginForm" name="loginForm" onload="Start()">
+                    <label for="genParam">View by Genre:</label><br>
+                    <input type="text"  id="genre" name="genre" ><br>
+                    <label for="fromParams">From Year:</label><br>
+                    <input type="text"  name="fromParam" id="fromParam" ><br>
+                    <label for="toParams">To Year:</label><br>
+                    <input type="text"  name="toParam" id="toParam" ><br>
+                    
+                    <label for="titelParam">View by Title:</label><br>
+                    <input type="text"  id="title" name="title" ><br>
+                    <label for="authorParam">View by Author:</label><br>
+                    <input type="text"  id="author" name="author" ><br>
+                    <label for="fromPages">From Pages:</label><br>
+                    <input type="text"  name="fromPages" id="fromPages" ><br>
+                    <label for="toPages">To Pages:</label><br>
+                    <input type="text"  name="toPages" id="toPages" ><br>
+                    <button type="Big" class="big" onclick="getBooks();return false;" value="Update">SeeBooks</button>
+                    <button type="Big" class="big" id="ret" onclick="window.location.href ='index.html' ">Return to Homepage</button><br>
+                    <div id="ajaxContent"></div>
+
+              </form>
+              <div class="login-image">
+                <img src="img/library5.jpg" width="100%"height="200%">
+            </div>
+        </div>
+        
+    </body>
+
+</html>
+

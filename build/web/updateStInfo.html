@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+    <head> 
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <link rel="stylesheet" href="css/welcomeStyle.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="js/loginStuLib.js"></script>
+    </head>
+
+    <body style="background-color: rgb(240, 240, 240)"> 
+        <div class="login-container">
+            <div class="login-image">
+                <img src="img/library4.jpg" width="100%"height="200%">
+            </div>
+            <form class="loginForm" id="loginForm" name="loginForm" onsubmit='getUser();return false;'>
+                <input type="text"  id="username" name="username" required style="display: none;">
+                <input type="password"  name="password" id="password" required style="display: none;">
+    
+                <label for="student_id">Change Academic ID:</label><br>
+                <input type="text"  id="student_id" name="student_id" required><br>
+
+                <label for="university">Change University:</label><br>
+                <select name="university" id="university" >
+                    <option value="UOC">University of Crete (UoC)</option>
+                    <option value="HELMEPA">Hellenic Mediterenian University (HELMEPA)</option>
+                    <option value="TUC">Technical University Crete (TUC)</option>
+                </select>
+                <br>
+            
+                <label for="university">Change Email:</label><br>
+                <input type="text"  id="email" name="email" required><br>
+                
+                <input type="button" class="updateStudent" onclick="UpdateStudent();return false;"  value="Update Book">                
+                <div id="ajaxContent"></div>
+            </form>
+            
+        </div>
+      </body>
+</html>
+

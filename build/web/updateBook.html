@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" class="no-js">
+    <head> 
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="js/updateBook.js" defer></script>
+        <link rel="stylesheet" href="css/updateBook.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    </head>
+    <body>
+
+        <div class="row">
+            <div class="column column1Width" id="choices" style="background-color:#ADD8E6;">           
+                <form id="loginForm" name="loginForm" onload="Start()">
+                    <label for="genParam">View by Genre:</label><br>
+                    <input type="text"  id="genre" name="genre" ><br>
+                    <label for="fromParams">From Year:</label><br>
+                    <input type="text"  name="fromParam" id="fromParam" >
+                    <label for="toParams">To Year:</label><br>
+                    <input type="text"  name="toParam" id="toParam" >
+                    
+                    <label for="titelParam">View by Title:</label><br>
+                    <input type="text"  id="title" name="title" ><br>
+                    <label for="authorParam">View by Author:</label><br>
+                    <input type="text"  id="author" name="author" ><br>
+                    <label for="fromPages">From Pages:</label><br>
+                    <input type="text"  name="fromPages" id="fromPages" >
+                    <label for="toPages">To Pages:</label><br>
+                    <input type="text"  name="toPages" id="toPages" >
+                    <input type="button" class="update" onclick="getBooks();return false;" value="Update">
+                    <input type="button" class="button" value="Logout" onclick="Logout()" style="background-color: red;">
+               </form>
+            </div>
+            <div class="column column2Width" id="output" style="background-color:#fffff0;">
+                <h2>Output</h2>
+                <div id="ajaxContent"></div>
+                
+            </div>
+			<div class="column column3Width" id="output" style="background-color:#fffff0;">
+                <form id="updateForm" name="updateForm">
+                    <label for="bkUp">Update Book Pages:</label><br>
+                    <label for="isbn">ISBN:</label><br>
+                    <input type="text"  id="isbn" name="isbn" required><br><br>
+
+                    <label for="pages">New Book Pages:</label><br>
+                    <input type="text"  id="pages" name="pages" required><br><br>
+                    <input type="button" class="updateBook" onclick="UpdateBookPages();return false;"  value="Update Book Pages">  
+                    <input type="button" class="delBook" onclick="deleteBook();return false;"  value="Delete Book">                
+                    
+                    
+                
+                </form>
+            </div>
+        </div>
+        <br>
+          
+    </body>
+
+</html>
+

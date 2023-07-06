@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" class="no-js">
+    <head> 
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <link rel="stylesheet" href="css/welcomeStyle.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="js/borrowBook.js"></script>
+    </head>
+
+    <body style="background-color: rgb(240, 240, 240)"> 
+        <div class="login-container">
+          
+          <form class="loginForm" id="loginForm" name="loginForm" onsubmit='getUser();return false;'>
+            <h1>Request to borrow a Book</h1>
+            <form id="loginForm" name="loginForm" onload="Start()">
+                <input type="text"  id="username" name="username" required style="display: none;">
+                <input type="password"  name="password" id="password" required style="display: none;">
+
+                <label for="isbn">Book isbn:</label><br>
+                <input type="text"  id="isbn" name="isbn" required><br>
+            
+                <label for="library">library_id:</label><br>
+                <input type="library"  id="library" name="library_id" required><br><br>
+                
+                <input type="button" class="update" onclick="getBooks();return false;" value="See Availability">
+                <input type="button" class="update" onclick="reqBorrow();return false;" value="Request to borrow">
+                
+                <div id="ajaxContent"></div>
+            </form>
+          </form>
+          <div class="login-image">
+            <img src="img/library3.jpg" width="100%"height="200%">
+          </div>
+        </div>
+      </body>
+</html>
+
